@@ -1,4 +1,5 @@
-= 7 Languages in 7 weeks
+7 Languages in 7 weeks
+======================
 
 I'll be exploring 7 languages with some folks using the 7LI7W book.
 
