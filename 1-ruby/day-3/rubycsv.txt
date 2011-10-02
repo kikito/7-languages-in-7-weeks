@@ -1,0 +1,4 @@
+name, age, air color
+pete, 20, brown
+mary, 31, blonde
+john, 18, dark
