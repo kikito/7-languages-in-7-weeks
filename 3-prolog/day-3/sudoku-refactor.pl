@@ -22,30 +22,27 @@ col(Col, Puzzle, [C1,C2,C3,C4]) :-
   cell(Col, 3, Puzzle, C3),
   cell(Col, 4, Puzzle, C4).
 
-square(X1,X2,Y1,Y2, Puzzle, [S1,S2,S3,S4]) :-
+square(X1,Y1, Puzzle, [S1,S2,S3,S4]) :-
+  X2 is X1 + 1,
+  Y2 is Y1 + 1,
   cell(X1,Y1, Puzzle, S1),
   cell(X1,Y2, Puzzle, S2),
   cell(X2,Y1, Puzzle, S3),
-  cell(X2,Y2, Puzzl3, S4).
+  cell(X2,Y2, Puzzle, S4).
 
 sudoku(Puzzle, Solution) :-
 
   Solution = Puzzle,
-
-  Puzzle = [S11,S12,S13,S14,
-            S21,S22,S23,S24,
-            S31,S32,S33,S34,
-            S41,S42,S43,S44],
 
   fd_domain(Solution, 1, 4),
 
   row(1, Puzzle, Row1), row(2, Puzzle, Row2), row(3, Puzzle, Row3), row(4, Puzzle, Row4),
   col(1, Puzzle, Col1), col(2, Puzzle, Col2), col(3, Puzzle, Col3), col(4, Puzzle, Col4),
 
-  square(1,2,1,2, Puzzle, Sq1),
-  square(1,2,3,4, Puzzle, Sq2),
-  square(3,4,1,2, Puzzle, Sq3),
-  square(3,4,3,4, Puzzle, Sq4),
+  square(1,1, Puzzle, Sq1),
+  square(1,3, Puzzle, Sq2),
+  square(3,1, Puzzle, Sq3),
+  square(3,3, Puzzle, Sq4),
 
   valid([Row1,Row2,Row3,Row4,
          Col1,Col2,Col3,Col4,
