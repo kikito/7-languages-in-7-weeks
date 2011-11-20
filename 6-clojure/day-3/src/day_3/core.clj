@@ -18,3 +18,15 @@
 
 (defn debit [id amount]
   (credit id (- amount)))
+
+
+
+; model the barber shop problem using threads and calculate how much clients can a barber cut in 10 seconds, assuming
+; that the barber takes 20 ms to make a cut.
+
+(print 500) ; lol
+
+
+; copy from here http://antoniogarrote.wordpress.com/2011/04/04/barber-shop-problem-again/
+
+

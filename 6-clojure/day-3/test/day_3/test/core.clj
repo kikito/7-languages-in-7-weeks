@@ -16,3 +16,4 @@
   (credit 3 10)
   (debit 3 2)
   (is (= 8 (balance 3))))
+
