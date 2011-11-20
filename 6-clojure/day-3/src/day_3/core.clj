@@ -14,8 +14,7 @@
 
 (defn credit [id amount]
   (dosync
-    (alter accounts assoc id (+ amount (balance id)))))
+    (alter accounts assoc id (+ (balance id) amount))))
 
 (defn debit [id amount]
-  (dosync
-    (alter accounts assoc id (- (balance id) amount))))
+  (credit id (- amount)))
