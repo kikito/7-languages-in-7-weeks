@@ -1,7 +1,7 @@
 # print "hello world"
 puts "Hello world"
 
-# find the index of the world Ruby in "Hello Ruby"
+# find the index of the word Ruby in "Hello Ruby"
 puts "Hello Ruby".index "Ruby"
 
 # print your name ten times
