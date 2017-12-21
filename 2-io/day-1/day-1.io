@@ -1,5 +1,5 @@
 # find some sample io problems
-# http://iolanguage.com/about/samplecode/
+# http://iolanguage.org/guide/guide.html#Syntax
 
 # Io community that will answer questions
 # stackoverflow.com  :D
